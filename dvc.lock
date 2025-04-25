@@ -1,0 +1,15 @@
+schema: '2.0'
+stages:
+  download:
+    cmd: python src/download.py --version 20220301.simple --save_path data/wikipedia_simple_en.hf
+    deps:
+    - path: src/download.py
+      hash: md5
+      md5: 6f8ca192565bda7472b5fffb45b1610a
+      size: 1214
+    outs:
+    - path: data/wikipedia_simple_en.hf
+      hash: md5
+      md5: 7dd0e6ed1e50e9294e1eac32594d0562.dir
+      size: 235144298
+      nfiles: 4

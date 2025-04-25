@@ -1,0 +1,7 @@
+stages:
+  download:
+    cmd: python src/download.py --version 20220301.simple --save_path data/wikipedia_simple_en.hf
+    deps:
+    - src/download.py
+    outs:
+    - data/wikipedia_simple_en.hf
