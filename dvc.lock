@@ -13,3 +13,28 @@ stages:
       md5: 7dd0e6ed1e50e9294e1eac32594d0562.dir
       size: 235144298
       nfiles: 4
+  prepare:
+    cmd: python src/prepare.py
+    deps:
+    - path: data/wikipedia_simple_en.hf
+      hash: md5
+      md5: 7dd0e6ed1e50e9294e1eac32594d0562.dir
+      size: 235144298
+      nfiles: 4
+    - path: src/prepare.py
+      hash: md5
+      md5: 2043476af362d40cb4435dd32a4acfef
+      size: 4775
+    outs:
+    - path: data/processed/vocab.txt
+      hash: md5
+      md5: d0196b2f36267c6ca9f7cb02ee747802
+      size: 189573
+    - path: data/processed/wikipedia_docs.txt
+      hash: md5
+      md5: 354f4b7baa2b8d64fa0a14adddbf5c4b
+      size: 48610172
+    - path: data/processed/wikipedia_embeddings.npz
+      hash: md5
+      md5: eef291e6ae0f08ef9ca9377296aea97c
+      size: 289889022

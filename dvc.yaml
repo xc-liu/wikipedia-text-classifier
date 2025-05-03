@@ -5,3 +5,12 @@ stages:
     - src/download.py
     outs:
     - data/wikipedia_simple_en.hf
+  prepare:
+    cmd: python src/prepare.py
+    deps:
+    - data/wikipedia_simple_en.hf
+    - src/prepare.py
+    outs:
+    - data/processed/vocab.txt
+    - data/processed/wikipedia_docs.txt
+    - data/processed/wikipedia_embeddings.npz
