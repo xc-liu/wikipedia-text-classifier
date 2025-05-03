@@ -14,3 +14,11 @@ stages:
     - data/processed/vocab.txt
     - data/processed/wikipedia_docs.txt
     - data/processed/wikipedia_embeddings.npz
+  train:
+    cmd: python src/train.py
+    deps:
+    - data/processed/vocab.txt
+    - data/processed/wikipedia_docs.txt
+    - data/processed/wikipedia_embeddings.npz
+    outs:
+    - models/wikipedia_topic_model

@@ -23,8 +23,8 @@ stages:
       nfiles: 4
     - path: src/prepare.py
       hash: md5
-      md5: 2043476af362d40cb4435dd32a4acfef
-      size: 4775
+      md5: f6e68aac39f2279554c9e2fc983d4973
+      size: 4779
     outs:
     - path: data/processed/vocab.txt
       hash: md5
@@ -32,9 +32,30 @@ stages:
       size: 189573
     - path: data/processed/wikipedia_docs.txt
       hash: md5
-      md5: 354f4b7baa2b8d64fa0a14adddbf5c4b
-      size: 48610172
+      md5: 39674893c4aed36bc4bacac82d07c266
+      size: 49020828
     - path: data/processed/wikipedia_embeddings.npz
       hash: md5
       md5: eef291e6ae0f08ef9ca9377296aea97c
       size: 289889022
+  train:
+    cmd: python src/train.py
+    deps:
+    - path: data/processed/vocab.txt
+      hash: md5
+      md5: d0196b2f36267c6ca9f7cb02ee747802
+      size: 189573
+    - path: data/processed/wikipedia_docs.txt
+      hash: md5
+      md5: 39674893c4aed36bc4bacac82d07c266
+      size: 49020828
+    - path: data/processed/wikipedia_embeddings.npz
+      hash: md5
+      md5: eef291e6ae0f08ef9ca9377296aea97c
+      size: 289889022
+    outs:
+    - path: models/wikipedia_topic_model
+      hash: md5
+      md5: dd351e480554d45fe87fa60da468a92c.dir
+      size: 6859774
+      nfiles: 5

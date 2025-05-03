@@ -109,7 +109,7 @@ if __name__ == "__main__":
     # Save the documents to a file
     with open("data/processed/wikipedia_docs.txt", "w") as f:
         for doc in docs:
-            f.write(f"{doc}\n")
+            f.write(f"{doc}\n\n\n")
     print(f"First paragraphs saved to data/processed/wikipedia_docs.txt")
     
     # Create embeddings for the documents
