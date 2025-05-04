@@ -59,3 +59,15 @@ stages:
       md5: dd351e480554d45fe87fa60da468a92c.dir
       size: 6859774
       nfiles: 5
+  evaluate:
+    cmd: python src/evaluate.py
+    deps:
+    - path: data/processed/wikipedia_docs.txt
+      hash: md5
+      md5: 39674893c4aed36bc4bacac82d07c266
+      size: 49020828
+    - path: models/wikipedia_topic_model
+      hash: md5
+      md5: dd351e480554d45fe87fa60da468a92c.dir
+      size: 6859774
+      nfiles: 5

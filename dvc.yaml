@@ -22,3 +22,8 @@ stages:
     - data/processed/wikipedia_embeddings.npz
     outs:
     - models/wikipedia_topic_model
+  evaluate:
+    cmd: python src/evaluate.py
+    deps:
+    - data/processed/wikipedia_docs.txt
+    - models/wikipedia_topic_model
