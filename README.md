@@ -2,8 +2,6 @@
 
 A machine learning pipeline for topic modeling on Simple English Wikipedia articles using BERTopic, DVC, and FastAPI, packaged and served with Docker.
 
----
-
 ## 🚀 Project Overview
 
 This project demonstrates an end-to-end MLOps workflow:
@@ -16,8 +14,6 @@ This project demonstrates an end-to-end MLOps workflow:
 
 The project is used for learning and practicing MLOps tools, and future steps may include deploying the app or integrating RAG.
 
----
-
 ## 🧰 Tools & Technologies
 
 | Category        | Stack                         |
@@ -29,8 +25,6 @@ The project is used for learning and practicing MLOps tools, and future steps ma
 | Serving         | `FastAPI`, `Uvicorn`          |
 | Containerization| `Docker`                      |
 | Language        | Python                        |
-
----
 
 ## 📂 Project Structure
 
@@ -47,8 +41,6 @@ The project is used for learning and practicing MLOps tools, and future steps ma
 └── requirements.txt
 
 ````
-
----
 
 ## 🧪 How to Run
 
@@ -82,16 +74,12 @@ docker run -p 8000:8000 wikipedia-topic-api
 
 Visit [http://localhost:8000/docs](http://localhost:8000/docs) for interactive API docs.
 
----
-
 ## 🧠 What I Learned
 
 * How to manage ML pipelines with DVC
 * How to serve models with FastAPI
 * How to structure a modular ML project
 * How to containerize and run an ML app with Docker
-
----
 
 ## 🛠️ Future Plans
 
